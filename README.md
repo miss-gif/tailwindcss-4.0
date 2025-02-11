@@ -44,3 +44,33 @@ export default {
 ```
 
 2. Tailwind CSS 설치 방법이 굉장히 간소해졌다.
+
+## 추천하는 플러그
+
+1. 터미널에 명령어 입력
+
+```
+npm install -D prettier prettier-plugin-tailwindcss
+```
+
+2. .prettierrc.json 파일에 플러그 추가
+
+```
+{
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
+```
+
+사용 전)
+
+```
+<p className="bg-slate-100 p-2">테스트</p>
+<p className="p-2 bg-slate-100">테스트</p>
+```
+
+사용 후)
+
+```
+<p className="bg-slate-100 p-2">테스트</p>
+<p className="bg-slate-100 p-2">테스트</p>
+```
