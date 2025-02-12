@@ -1,10 +1,20 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "@/layouts/Layout";
+import Home from "@/pages/Home";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
+
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <p className="bg-slate-100 p-2">1123</p>
-      <p className="bg-slate-100 p-2">1123</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
